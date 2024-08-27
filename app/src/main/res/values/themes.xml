@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Discord" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-       <item name="colorPrimary">@color/light_black</item>
+       <item name="colorPrimary">@color/light_2black</item>
     </style>
 
     <style name="Theme.Discord" parent="Base.Theme.Discord" />

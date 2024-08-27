@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:backgroundTint="@color/light_black"
+    android:backgroundTint="@color/light_2black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_black"
@@ -14,8 +14,8 @@
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_width="79dp"
         android:layout_height="0dp"
-        android:background="@color/light_black"
-        android:backgroundTint="@color/light_black"
+        android:background="@color/light_2black"
+        android:backgroundTint="@color/light_2black"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,26 +23,89 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
+        android:id="@+id/container"
         android:layout_marginEnd="@dimen/_10sdp"
         android:background="@drawable/backgroundfragment"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_height="0dp"
         android:backgroundTint="@color/light_3black"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rv_recyclerView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:background="@color/light_2black"
+        android:background="@color/light_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <ImageView
+            android:id="@+id/navDiscord"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/navdiscord" />
 
+        <ImageView
+            android:id="@+id/messages"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/navDiscord"
+            app:layout_constraintStart_toEndOf="@+id/navDiscord"
+            app:layout_constraintTop_toTopOf="@+id/navDiscord"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/comments" />
 
+        <ImageView
+            android:id="@+id/notification"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/messages"
+            app:layout_constraintStart_toEndOf="@+id/messages"
+            app:layout_constraintTop_toTopOf="@+id/messages"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/notification_bell" />
+
+        <ImageView
+            android:id="@+id/gameFight"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/notification"
+            app:layout_constraintStart_toEndOf="@+id/notification"
+            app:layout_constraintTop_toTopOf="@+id/notification"
+            app:srcCompat="@drawable/sword" />
+
+        <ImageView
+            android:id="@+id/voiceRoom"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/gameFight"
+            app:layout_constraintStart_toEndOf="@+id/gameFight"
+            app:layout_constraintTop_toTopOf="@+id/gameFight"
+            app:srcCompat="@drawable/sound_waves" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
