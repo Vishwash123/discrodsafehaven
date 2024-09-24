@@ -5,19 +5,92 @@
     android:layout_width="match_parent"
     android:background="@color/invisible"
     android:layout_height="match_parent"
+    android:padding="@dimen/_16sdp"
+
     tools:context=".fragments.VoiceRoom">
 
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Top_CL_VCRoom"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Voice Room"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_50sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="@dimen/_125sdp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/VC_room_channel_icon"
+            android:layout_width="@dimen/_78sdp"
+            android:layout_height="@dimen/_78sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/f_lenora"
+            android:scaleType="centerCrop"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/VC_room_channel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+
+            android:text="Team 7"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/VC_room_channel_icon"
+            app:layout_constraintTop_toTopOf="@+id/VC_room_channel_icon" />
+
+
+        <TextView
+            android:id="@+id/VC_room_channel_amount"
+            android:layout_width="@dimen/_78sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:textColor="@color/white"
+            android:text="48 voice channels"
+            android:textSize="12sp"
+
+
+            app:layout_constraintBottom_toBottomOf="@+id/VC_room_channel_icon"
+            app:layout_constraintEnd_toEndOf="@+id/VC_room_channel_name"
+
+
+            app:layout_constraintStart_toEndOf="@+id/VC_room_channel_icon"
+            app:layout_constraintTop_toBottomOf="@+id/VC_room_channel_name"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vcroomline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:cardCornerRadius="@dimen/_46sdp"
+        app:cardBackgroundColor="#958E8E"
+        android:layout_marginBottom="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Top_CL_VCRoom" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/VC_room_RV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/vcroomline"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

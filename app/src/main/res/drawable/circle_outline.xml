@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer Layer -->
+    <item android:right="@dimen/_4sdp" android:left="@dimen/_4sdp" android:top="@dimen/_4sdp" android:bottom="@dimen/_4sdp">
+        <shape android:shape="oval">
+            <solid android:color="#80bd75ff" />
+        </shape>
+    </item>
+
+    <!-- Inner Layer -->
+    <item android:right="@dimen/_15sdp" android:left="@dimen/_15sdp" android:top="@dimen/_15sdp" android:bottom="@dimen/_15sdp">
+        <shape android:shape="oval">
+            <solid android:color="#80d3a6e7" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/fragment_voice_call_container"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/_16sdp"
+
+    android:background="@drawable/backgroundfragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/voiceRoom_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/cardbackground"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/voiceCall_member_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/voiceCall_card_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cardbackground"
+            android:paddingLeft="@dimen/_16sdp"
+            android:paddingTop="@dimen/_40sdp"
+            android:paddingRight="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_16sdp">
+
+            <TextView
+                android:id="@+id/voiceCall_room_name"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semibold"
+                android:maxLines="3"
+                android:text="Discussing the Future of the World"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/voiceCall_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cross"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/voicCall_currentPhoto"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginTop="52dp"
+                android:background="@drawable/circle_outline"
+                android:padding="30dp"
+                android:src="@drawable/f_lenora"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/voiceCall_room_name" />
+
+            <LinearLayout
+                android:id="@+id/voiceCall_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginRight="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/voiceCall_mute_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/circle_transparent_white_outline"
+                    android:padding="@dimen/_18sdp"
+                    android:src="@drawable/vcmic"
+
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/voiceCall_endCall_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/circle_transparent_white_outline"
+                    android:padding="@dimen/_18sdp"
+                    android:src="@drawable/vcendcall" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/voiceCall_speaker_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/circle_transparent_white_outline"
+                    android:padding="@dimen/_18sdp"
+                    android:src="@drawable/vcspeaker" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/voiceCall_member_rv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="@dimen/_8sdp"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/vc_call_rv_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
